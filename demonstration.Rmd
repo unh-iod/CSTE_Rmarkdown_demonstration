@@ -1,0 +1,68 @@
+---
+title: "Report Generation using RStudio and Rmarkdown"
+subtitle: "What's Rmarkdown, and why should I use it?"
+author: Nate Thomas, NH Occupational Health Surveillance Program | Institute on Disability, University of New Hampshire
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output:
+  slidy_presentation: default
+---
+
+```{r setup = TRUE, echo=FALSE, warning=FALSE, error=FALSE, include=FALSE}
+library(tidyverse)
+library(knitr)
+```
+
+## Purpose
+
+Demonstrate:
+
+1. what Rmarkdown reports are
+
+2. how to make a report using Rmarkdown
+
+## Some common hurdles to report generation and distribution (in no particular order)
+
+- Assuming we know what we want to say, what is the least labor intensive way to get it to the public?
+
+- Making recursive reports (e.g. monthly, yearly) - where the root source of data is structured the same but is updated based on time
+
+- Owning the content, but not the distribution mechanism (having to get IT involved)
+
+## Why Use Rmarkdown?
+
+Concept → Content → Container → Conveyance 
+
+All in one place...
+
+Concept: Perform data investigation in the same interface used to develop the polished product - reducing time cycling between applications and fighting with formatting
+
+Content: Create the actual content of the report directly out of the raw data sets transformations
+
+Container: One file can be used to source the content and output multiple files depending on the preference of the audience (pdf, word, html) - as a pagenated presentation, or flat (scrollable) document
+
+Conveyance: Provide IT with a web-ready document, that can inheret all their predetermined CSS style.
+
+## Examples
+
+### HTML report content:
+
+```{r echo=F, comment=NA}  
+readLines("Draft HTML Introduction.Rmd") %>%
+  writeLines()
+```
+
+### HTML report container:
+
+```{r echo=F}
+htmltools::div(
+  style = "box-shadow: 5px 5px 6px grey;border: solid;border-color: #EEEEEE; border-width: 5px;",
+  htmltools::includeHTML("Draft-HTML-Introduction.html")
+)
+```
+
+### HTML report conveyance:
+
+https://www.researchondisability.org/ADSC/compendium-table-contents
+
+## Questions? 
+
