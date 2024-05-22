@@ -16,17 +16,17 @@ library(knitr)
 
 Demonstrate:
 
-1. what Rmarkdown reports are
+1. Rmarkdown reports
 
 2. how to make a report using Rmarkdown
 
-## Some common hurdles to report generation and distribution (in no particular order)
+## Some common hurdles experienced in report generation and distribution (in no particular order)
 
-- Assuming we know what we want to say, what is the least labor intensive way to get it to the public?
+- Given we know what we want to say, what is the least labor intensive way to get it to the public?
 
-- Making recursive reports (e.g. monthly, yearly) - where the root source of data is structured the same but is updated based on time
+- Making recursive reports (e.g. monthly, yearly) - where the root source of data is similarlly structured but is updated recursively
 
-- Owning the content, but not the distribution mechanism (having to get IT involved)
+- Owning the content, but not the distribution mechanism, somethimes IT is needed 
 
 ## Why Use Rmarkdown?
 
@@ -36,11 +36,11 @@ All in one place...
 
 Concept: Perform data investigation in the same interface used to develop the polished product - reducing time cycling between applications and fighting with formatting
 
-Content: Create the actual content of the report directly out of the raw data sets transformations
+Content: Create the actual content of the report directly from raw data sets transformations
 
-Container: One file can be used to source the content and output multiple files depending on the preference of the audience (pdf, word, html) - as a pagenated presentation, or flat (scrollable) document
+Container: One file (or R project) can be used to source the content and output multiple files depending on the preference of the audience (pdf, word, html) - as a paginated presentation, or flat (scrollable) document
 
-Conveyance: Provide IT with a web-ready document, that can inheret all their predetermined CSS style.
+Conveyance: Provide IT with a web-ready document, that can inherit all their predetermined CSS style.
 
 ## Examples
 
@@ -62,7 +62,7 @@ htmltools::div(
 
 ### HTML report conveyance:
 
-https://www.researchondisability.org/ADSC/compendium-table-contents
+https://www.researchondisability.org/ADSC/compendium-table-contents/introduction
 
 ## Questions? 
 
